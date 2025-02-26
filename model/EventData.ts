@@ -1,4 +1,5 @@
 export class EventData {
+    eventId !: number;
     eventName !: string;
     eventDate !: string;
     location !: string;

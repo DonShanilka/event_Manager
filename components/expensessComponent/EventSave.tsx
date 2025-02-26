@@ -11,12 +11,12 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 function EventManagementForm() {
   const [eventData, setEventData] = useState({
     eventName: '',
-    eventDate: new Date(),
+    eventDate: new Date(),  // Initialize with current date
     location: '',
     description: '',
-    price:'',
-    mobile:'',
-    organizerEmail: 'shanilka@gmail.com',
+    price: '',
+    mobile: '',
+    organizerEmail: '',
   });
 
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -36,7 +36,6 @@ function EventManagementForm() {
   return (
     <View style={styles.form}>
       <View style={styles.field}>
-        <Text style={styles.label}>Event Name</Text>
         <TextInput
           style={styles.input}
           placeholder="Enter event name"
@@ -46,9 +45,8 @@ function EventManagementForm() {
       </View>
 
       <View style={styles.field}>
-        <Text style={styles.label}>Event Date</Text>
         <TouchableOpacity onPress={() => setShowDatePicker(true)} style={styles.input}>
-          <Text>{eventData.eventDate.toDateString()}</Text>
+          <Text>{eventData.eventDate ? new Date(eventData.eventDate).toDateString() : 'Select Date'}</Text>
         </TouchableOpacity>
         {showDatePicker && (
           <DateTimePicker
@@ -61,7 +59,6 @@ function EventManagementForm() {
       </View>
 
       <View style={styles.field}>
-        <Text style={styles.label}>Location</Text>
         <TextInput
           style={styles.input}
           placeholder="Enter location"
@@ -71,7 +68,6 @@ function EventManagementForm() {
       </View>
 
       <View style={styles.field}>
-        <Text style={styles.label}>Description</Text>
         <TextInput
           style={styles.input}
           placeholder="Enter event description"
@@ -81,11 +77,31 @@ function EventManagementForm() {
       </View>
 
       <View style={styles.field}>
-        <Text style={styles.label}>Organizer Email</Text>
         <TextInput
           style={styles.input}
+          placeholder="Enter event price"
+          keyboardType="numeric"
+          value={eventData.price}
+          onChangeText={(text) => setEventData({ ...eventData, price: text })}
+        />
+      </View>
+
+      <View style={styles.field}>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter mobile number"
+          keyboardType="phone-pad"
+          value={eventData.mobile}
+          onChangeText={(text) => setEventData({ ...eventData, mobile: text })}
+        />
+      </View>
+
+      <View style={styles.field}>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter organizer email"
           value={eventData.organizerEmail}
-          editable={false}
+          onChangeText={(text) => setEventData({ ...eventData, organizerEmail: text })}
         />
       </View>
 
@@ -99,7 +115,6 @@ function EventManagementForm() {
 const styles = StyleSheet.create({
   form: { padding: 16, width: '100%' },
   field: { marginBottom: 16 },
-  label: { fontSize: 16, color: '#374151', marginBottom: 4 },
   input: {
     height: 48,
     borderWidth: 1,
