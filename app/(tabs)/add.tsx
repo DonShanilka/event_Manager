@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import EventSave from '@/components/expensessComponent/EventSave'
 
 type Props = {}
 
 const ExploreScreen = (props: Props) => {
   return (
     <View style={styles.container}>
-      <Text>Explore Screen</Text>
+      <Text>Add Screen</Text>
+      <EventSave/>
     </View>
   )
 }
