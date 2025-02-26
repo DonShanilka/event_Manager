@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
-import { EventData } from "@/model/EventData";
+import { EventData } from "@/src/model/EventData";
 
 const initialState : EventData[] = [];
 
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'http://localhost:5000',
 });
 
 export const saveEvent = createAsyncThunk(
