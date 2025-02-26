@@ -1,9 +1,12 @@
 import React from 'react';
 import { Tabs } from "expo-router";
 import { Ionicons } from '@expo/vector-icons';
+import { Provider } from 'react-redux';
+import { store } from '@/src/store/store';
 
 export default function TabLayout() {
   return (
+    <Provider store={store}>
     <Tabs screenOptions={{headerShown: false}}>
       <Tabs.Screen name='index' options={{
         title: 'Home',
@@ -37,5 +40,6 @@ export default function TabLayout() {
         )
       }} />
     </Tabs>
+    </Provider>
   );
 }

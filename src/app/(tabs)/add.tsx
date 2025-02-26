@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import EventSave from '@/components/expensessComponent/EventSave'
+import EventSave from '@/src/components/eventsComponent/EventSave'
 
 type Props = {}
 
