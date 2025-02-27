@@ -7,8 +7,13 @@ import {
   StyleSheet,
 } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { useDispatch } from 'react-redux';
+import { saveEvent } from '@/src/reducer/EventSlice';
 
 function EventManagementForm() {
+
+  const dispatch = useDispatch();
+
   const [eventData, setEventData] = useState({
     eventName: '',
     eventDate: new Date(),  // Initialize with current date
@@ -29,8 +34,8 @@ function EventManagementForm() {
   };
 
   const handleSubmit = () => {
+    dispatch(saveEvent(eventData));
     console.log('Event Data:', eventData);
-    // Add API call or database save logic here
   };
 
   return (
@@ -113,7 +118,7 @@ function EventManagementForm() {
 }
 
 const styles = StyleSheet.create({
-  form: { padding: 16, width: '100%' },
+  form: { padding: 16, width: '100%',backgroundColor:'#1e001e' },
   field: { marginBottom: 16 },
   input: {
     height: 48,

@@ -39,12 +39,12 @@ const EventCard = () => {
       {events.map((event) => (
         <View key={event.eventId} style={styles.card}>
           <Text style={styles.title}>{event.eventName}</Text>
-          <Text style={styles.infoText}><Text style={styles.infoLabel}>Date: </Text>{new Date(event.eventDate).toDateString()}</Text>
-          <Text style={styles.infoText}><Text style={styles.infoLabel}>Location: </Text>{event.location}</Text>
-          <Text style={styles.infoText}><Text style={styles.infoLabel}>Description: </Text>{event.description}</Text>
-          <Text style={styles.infoText}><Text style={styles.infoLabel}>Price: </Text>{event.price}</Text>
-          <Text style={styles.infoText}><Text style={styles.infoLabel}>Mobile: </Text>{event.mobile}</Text>
-          <Text style={styles.infoText}><Text style={styles.infoLabel}>Organizer: </Text>{event.organizerEmail}</Text>
+          <Text style={styles.infoText}><Text style={styles.infoLabel}>Date               : </Text>{new Date(event.eventDate).toDateString()}</Text>
+          <Text style={styles.infoText}><Text style={styles.infoLabel}>Location        : </Text>{event.location}</Text>
+          <Text style={styles.infoText}><Text style={styles.infoLabel}>Description   : </Text>{event.description}</Text>
+          <Text style={styles.infoText}><Text style={styles.infoLabel}>Price              : </Text>{event.price}</Text>
+          <Text style={styles.infoText}><Text style={styles.infoLabel}>Mobile           : </Text>{event.mobile}</Text>
+          <Text style={styles.infoText}><Text style={styles.infoLabel}>Organizer      : </Text>{event.organizerEmail}</Text>
           <View style={styles.buttonContainer}>
             <TouchableOpacity style={styles.updateButton} onPress={() => { setSelectedEvent(event); setModalVisible(true); }}>
               <Text style={styles.updateButtonText}>Update</Text>
