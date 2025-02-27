@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { Tabs } from "expo-router";
 import { Ionicons } from '@expo/vector-icons';
 import { Provider } from 'react-redux';
@@ -14,17 +15,19 @@ export default function TabLayout() {
           tabBarStyle: { 
             backgroundColor: '#1A1A31', 
             borderTopWidth: 0,
-            height: 70,
-            paddingBottom: 10,
-            paddingTop: 10,
+            height: 60,
+            paddingBottom: 8,
+            paddingTop: 8,
+            flexDirection: 'row',
+            justifyContent: 'space-between', // Ensure items are spaced evenly
           }, 
-          tabBarActiveTintColor: 'white',
-          tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.5)',
+          tabBarActiveTintColor: '#1A1A31',
+          tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.7)',
           tabBarItemStyle: {
-            marginHorizontal: 10,
-            justifyContent: 'center',
-            alignItems: 'center',
+            marginHorizontal: 15,
           },
+          tabBarActiveBackgroundColor: 'transparent',
+          tabBarShowLabel: false,
         }}
       >
         <Tabs.Screen 
@@ -32,17 +35,20 @@ export default function TabLayout() {
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
-              <Ionicons 
-                name={focused ? 'home' : 'home-outline'} 
-                size={24} 
-                color="white"
-                style={{
-                  backgroundColor: focused ? '#4EDB79' : 'transparent',
-                  padding: 12,
-                  borderRadius: 30,
-                  overflow: 'hidden',
-                }}
-              />
+              <View style={{
+                backgroundColor: focused ? '#4EDB79' : 'transparent',
+                borderRadius: 50,
+                width: 45,
+                height: 45,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+                <Ionicons 
+                  name={focused ? 'home' : 'home-outline'} 
+                  size={24} 
+                  color={focused ? '#1A1A31' : 'white'} 
+                />
+              </View>
             )
           }} 
         />
@@ -51,18 +57,24 @@ export default function TabLayout() {
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
-              <Ionicons 
-                name={focused ? 'bookmark' : 'bookmark-outline'} 
-                size={24} 
-                color="white"
-                style={{
-                  backgroundColor: focused ? '#4EDB79' : 'transparent',
-                  padding: 12,
-                  borderRadius: 30,
-                  overflow: 'hidden',
-                }}
-              />
-            )
+              <View style={{
+                backgroundColor: focused ? '#4EDB79' : 'transparent',
+                borderRadius: 50,
+                width: 45,
+                height: 45,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+                <Ionicons 
+                  name={focused ? 'add-circle' : 'add-circle-outline'} // Correct icon for add
+                  size={30} // Larger size for visibility
+                  color={focused ? '#1A1A31' : 'white'} 
+                />
+              </View>
+            ),
+            tabBarItemStyle: {
+              marginTop: -15, // Adjust to keep the button centered
+            }
           }} 
         />
         <Tabs.Screen 
@@ -70,20 +82,26 @@ export default function TabLayout() {
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
-              <Ionicons 
-                name={focused ? 'calendar' : 'calendar-outline'} 
-                size={24} 
-                color="white"
-                style={{
-                  backgroundColor: focused ? '#4EDB79' : 'transparent',
-                  padding: 12,
-                  borderRadius: 30,
-                  overflow: 'hidden',
-                }}
-              />
+              <View style={{
+                backgroundColor: '#4EDB79',
+                borderRadius: 50,
+                width: 55,
+                height: 55,
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderWidth: focused ? 3 : 0,
+                borderColor: '#1A1A31',
+                marginBottom: 25,
+              }}>
+                <Ionicons 
+                  name={focused ? 'calendar' : 'calendar-outline'} 
+                  size={28} 
+                  color="#1A1A31"
+                />
+              </View>
             ),
             tabBarItemStyle: {
-              marginTop: -15, // Raises the middle button slightly
+              marginTop: -15,
             }
           }} 
         />
@@ -92,17 +110,20 @@ export default function TabLayout() {
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
-              <Ionicons 
-                name={focused ? 'search' : 'search-outline'} 
-                size={24} 
-                color="white"
-                style={{
-                  backgroundColor: focused ? '#4EDB79' : 'transparent',
-                  padding: 12,
-                  borderRadius: 30,
-                  overflow: 'hidden',
-                }}
-              />
+              <View style={{
+                backgroundColor: focused ? '#4EDB79' : 'transparent',
+                borderRadius: 50,
+                width: 45,
+                height: 45,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+                <Ionicons 
+                  name={focused ? 'search' : 'search-outline'} 
+                  size={24} 
+                  color={focused ? '#1A1A31' : 'white'} 
+                />
+              </View>
             )
           }} 
         />
@@ -111,17 +132,20 @@ export default function TabLayout() {
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
-              <Ionicons 
-                name={focused ? 'person' : 'person-outline'} 
-                size={24} 
-                color="white"
-                style={{
-                  backgroundColor: focused ? '#4EDB79' : 'transparent',
-                  padding: 12,
-                  borderRadius: 30,
-                  overflow: 'hidden',
-                }}
-              />
+              <View style={{
+                backgroundColor: focused ? '#4EDB79' : 'transparent',
+                borderRadius: 50,
+                width: 45,
+                height: 45,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+                <Ionicons 
+                  name={focused ? 'person' : 'person-outline'} 
+                  size={24} 
+                  color={focused ? '#1A1A31' : 'white'} 
+                />
+              </View>
             )
           }} 
         />
