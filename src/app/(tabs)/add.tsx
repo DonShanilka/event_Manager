@@ -7,7 +7,6 @@ type Props = {}
 const ExploreScreen = (props: Props) => {
   return (
     <View style={styles.container}>
-      {/* <Text>Add Screen</Text> */}
       <EventSave/>
     </View>
   )
