@@ -53,7 +53,7 @@ export default function TabLayout() {
           }} 
         />
         <Tabs.Screen 
-          name='saved' 
+          name='add' 
           options={{
             title: '',
             tabBarIcon: ({ color, focused }) => (
@@ -66,8 +66,8 @@ export default function TabLayout() {
                 alignItems: 'center',
               }}>
                 <Ionicons 
-                  name={focused ? 'add-circle' : 'add-circle-outline'} // Correct icon for add
-                  size={30} // Larger size for visibility
+                  name={focused ? 'add-circle' : 'add-circle-outline'} // Corrected icons for Add button
+                  size={24}  // Default icon size
                   color={focused ? '#1A1A31' : 'white'} 
                 />
               </View>

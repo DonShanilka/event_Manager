@@ -50,7 +50,7 @@ function EventManagementForm() {
       </View>
 
       <View style={styles.field}>
-        <TouchableOpacity onPress={() => setShowDatePicker(true)} style={styles.input}>
+        <TouchableOpacity onPress={() => setShowDatePicker(true)} style={styles.dateColor}>
           <Text>{eventData.eventDate ? new Date(eventData.eventDate).toDateString() : 'Select Date'}</Text>
         </TouchableOpacity>
         {showDatePicker && (
@@ -136,7 +136,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     justifyContent: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    color: 'white',
+    color: 'rgb(255, 255, 255)',
+    // color: 'linear-gradient(90deg, rgba(181,181,181,0.4990371148459384) 0%, rgba(181,181,181,0.5) 100%)'
+  },
+  dateColor: {
+    height: 48,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    fontSize: 16,
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    color:'#ff884d'
   },
   submitBtn: {
     width: '100%',
