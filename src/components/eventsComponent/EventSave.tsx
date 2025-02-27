@@ -137,7 +137,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
     color: 'rgb(255, 255, 255)',
-    // color: 'linear-gradient(90deg, rgba(181,181,181,0.4990371148459384) 0%, rgba(181,181,181,0.5) 100%)'
   },
   dateColor: {
     height: 48,
