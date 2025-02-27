@@ -121,24 +121,115 @@ const EventCard = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { padding: 20 },
-  card: { backgroundColor: '#fff', padding: 15, marginVertical: 10, borderRadius: 8, shadowColor: '#000', shadowOpacity: 0.2, shadowRadius: 4 },
-  title: { fontSize: 18, fontWeight: 'bold' },
-  infoText: { marginTop: 5 },
-  infoLabel: { fontWeight: 'bold' },
-  buttonContainer: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 },
-  updateButton: { backgroundColor: '#d9d9d9', borderWidth:1 ,borderColor:'#cccccc', padding: 10, borderRadius: 5, width:'100%' },
-  updateButtonText: {color:'#0000ff', textAlign: 'center', fontWeight:'bold'},
-  deleteButton: { position: 'absolute', top: '8%', right: '1%' },
-  deleteIcon: { width: 24, height: 24 },
-  buttonText: { color: '#fff', textAlign: 'center' },
-  modalContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' },
-  modalView: { backgroundColor: 'white', padding: 20, borderRadius: 10, width: '80%' },
-  modalTitle: { fontSize: 20, fontWeight: 'bold', marginBottom: 10 },
-  input: { borderWidth: 1, borderColor: '#ccc', padding: 10, marginVertical: 5, width: '100%', borderRadius: 5 },
-  datePickerText: { marginVertical: 10, color: 'blue' },
-  saveButton: { backgroundColor: 'green', padding: 10, borderRadius: 5, marginTop: 10 },
-  closeButton: { backgroundColor: 'gray', padding: 10, borderRadius: 5, marginTop: 10 },
+  container: { 
+    padding: 20, 
+    backgroundColor: '#1A1A31' 
+  },
+  card: { 
+    backgroundColor: '#242442', 
+    padding: 15, 
+    marginVertical: 10, 
+    borderRadius: 12, 
+    shadowColor: '#000', 
+    shadowOpacity: 0.3, 
+    shadowRadius: 5,
+    borderLeftWidth: 0,
+    position: 'relative',
+    overflow: 'hidden'
+  },
+  title: { 
+    fontSize: 18, 
+    fontWeight: 'bold',
+    color: 'white',
+    marginBottom: 8
+  },
+  infoText: { 
+    marginTop: 5,
+    color: 'rgba(255, 255, 255, 0.8)'
+  },
+  infoLabel: { 
+    fontWeight: 'bold',
+    color: 'rgba(255, 255, 255, 0.9)'
+  },
+  buttonContainer: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    marginTop: 15 
+  },
+  updateButton: { 
+    backgroundColor: 'transparent', 
+    borderWidth: 1,
+    borderColor: '#4EDB79', 
+    padding: 8, 
+    borderRadius: 20, 
+    width: '100%' 
+  },
+  updateButtonText: {
+    color: '#4EDB79', 
+    textAlign: 'center', 
+    fontWeight: 'bold',
+    fontSize: 13
+  },
+  deleteButton: { 
+    position: 'absolute', 
+    top: 15, 
+    right: 15 
+  },
+  deleteIcon: { 
+    width: 24, 
+    height: 24 
+  },
+  buttonText: { 
+    color: '#fff', 
+    textAlign: 'center' 
+  },
+  modalContainer: { 
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    backgroundColor: 'rgba(0,0,0,0.7)' 
+  },
+  modalView: { 
+    backgroundColor: '#242442', 
+    padding: 20, 
+    borderRadius: 16, 
+    width: '80%' 
+  },
+  modalTitle: { 
+    fontSize: 20, 
+    fontWeight: 'bold', 
+    marginBottom: 15,
+    color: 'white'
+  },
+  input: { 
+    borderWidth: 1, 
+    borderColor: 'rgba(255, 255, 255, 0.2)', 
+    padding: 12, 
+    marginVertical: 6, 
+    width: '100%', 
+    borderRadius: 8,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    color: 'white'
+  },
+  datePickerText: { 
+    marginVertical: 10, 
+    color: '#4EDB79',
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  saveButton: { 
+    backgroundColor: '#4EDB79', 
+    padding: 12, 
+    borderRadius: 25, 
+    marginTop: 15 
+  },
+  closeButton: { 
+    backgroundColor: 'rgba(255, 255, 255, 0.2)', 
+    padding: 12, 
+    borderRadius: 25, 
+    marginTop: 10 
+  },
 });
 
 export default EventCard;
