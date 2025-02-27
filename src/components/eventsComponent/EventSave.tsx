@@ -117,30 +117,42 @@ function EventManagementForm() {
   );
 }
 
+
 const styles = StyleSheet.create({
-  form: { padding: 16, width: '100%',backgroundColor:'#1e001e' },
-  field: { marginBottom: 16 },
+  form: { 
+    padding: 20, 
+    width: '100%', 
+    backgroundColor: '#1A1A31' 
+  },
+  field: { 
+    marginBottom: 16 
+  },
   input: {
     height: 48,
     borderWidth: 1,
-    borderColor: '#D1D5DB',
+    borderColor: 'rgba(255, 255, 255, 0.2)',
     borderRadius: 8,
-    paddingHorizontal: 8,
+    paddingHorizontal: 12,
     fontSize: 16,
     justifyContent: 'center',
-    color: '#0D9488',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    color: 'white',
   },
   submitBtn: {
     width: '100%',
     height: 48,
     borderWidth: 1,
-    borderColor: '#34D399',
-    borderRadius: 8,
-    backgroundColor: '#ff0055',
+    borderColor: '#4EDB79',
+    borderRadius: 25,
+    backgroundColor: '#4EDB79',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 10,
   },
-  submitBtnText: { fontSize: 18, fontWeight: 'bold', color: '#ffffff' },
+  submitBtnText: { 
+    fontSize: 16, 
+    fontWeight: 'bold', 
+    color: '#1A1A31' 
+  },
 });
-
 export default EventManagementForm;
