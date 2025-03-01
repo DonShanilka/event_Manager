@@ -9,12 +9,12 @@ const SignInScreen = (props: Props) => {
   const [password, setPassword] = useState('');
 
   const handleSignIn = () => {
-    // You can implement actual sign-in logic here (e.g., API call)
+    
     if (!email || !password) {
       Alert.alert('Error', 'Please enter both email and password.');
     } else {
       router.dismissAll();
-      router.push('/(tabs)'); // Navigate to the app home screen
+      router.push('/(tabs)');
     }
   };
 
@@ -60,13 +60,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#1A1A31',  // Matching background color
+    backgroundColor: '#1A1A31',  
   },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 30,
-    color: '#fff',  // White text color to contrast with dark background
+    color: '#fff',  
   },
   input: {
     width: '100%',
@@ -76,13 +76,13 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 15,
     paddingLeft: 15,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',  // Semi-transparent input field
-    color: 'white',  // Text color inside input fields
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',  
+    color: 'white',  
   },
   submitBtn: {
     width: '100%',
     height: 50,
-    backgroundColor: '#4EDB79',  // Consistent button color from your other components
+    backgroundColor: '#4EDB79',  
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 25,
@@ -91,13 +91,13 @@ const styles = StyleSheet.create({
   submitBtnText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#1A1A31',  // Dark text to contrast with the button background
+    color: '#1A1A31',  
   },
   link: {
     marginTop: 10,
   },
   linkText: {
-    color: '#4EDB79',  // Link color matching other components
+    color: '#4EDB79',  
     fontSize: 16,
   },
 });

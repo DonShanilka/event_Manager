@@ -15,7 +15,7 @@ const SignUpScreen = (props: Props) => {
       alert('Passwords do not match');
     } else {
       alert('Sign up successful');
-      // Add actual sign-up logic here
+      
     }
   };
 
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#1A1A31', // Dark background color
+    backgroundColor: '#1A1A31',
   },
   title: {
     fontSize: 32,
@@ -75,10 +75,10 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: 50,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)', // Transparent white background
+    backgroundColor: 'rgba(255, 255, 255, 0.1)', 
     color: '#fff',
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.3)', // Light border color
+    borderColor: 'rgba(255, 255, 255, 0.3)', 
     borderRadius: 8,
     marginBottom: 15,
     paddingLeft: 15,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     height: 50,
-    backgroundColor: '#4EDB79', // Green button color
+    backgroundColor: '#4EDB79', 
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 25,

@@ -19,7 +19,7 @@ export default function TabLayout() {
             paddingBottom: 8,
             paddingTop: 8,
             flexDirection: 'row',
-            justifyContent: 'space-between', // Ensure items are spaced evenly
+            justifyContent: 'space-between', 
           }, 
           tabBarActiveTintColor: '#1A1A31',
           tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.7)',
@@ -66,14 +66,14 @@ export default function TabLayout() {
                 alignItems: 'center',
               }}>
                 <Ionicons 
-                  name={focused ? 'add-circle' : 'add-circle-outline'} // Corrected icons for Add button
-                  size={24}  // Default icon size
+                  name={focused ? 'add-circle' : 'add-circle-outline'} 
+                  size={24}  
                   color={focused ? '#1A1A31' : 'white'} 
                 />
               </View>
             ),
             tabBarItemStyle: {
-              marginTop: -15, // Adjust to keep the button centered
+              marginTop: -15, 
             }
           }} 
         />

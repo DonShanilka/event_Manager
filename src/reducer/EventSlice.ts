@@ -28,7 +28,7 @@ export const saveEvent = createAsyncThunk(
 export const updateEvent = createAsyncThunk(
   'event/updateEvent',
   async (updateData) => {
-    const id = updateData.eventId;  // Fix: Use direct property access
+    const id = updateData.eventId;  
     console.log("Updating Event with Event :", id, updateData);
 
     try {
@@ -36,7 +36,7 @@ export const updateEvent = createAsyncThunk(
       return response.data;
     } catch (error) {
       console.error("Error updating Event:", error);
-      throw error; // Ensure error propagates to rejected case
+      throw error; 
     }
   }
 );

@@ -16,7 +16,7 @@ function EventManagementForm() {
 
   const [eventData, setEventData] = useState({
     eventName: '',
-    eventDate: new Date(),  // Initialize with current date
+    eventDate: new Date(),  
     location: '',
     description: '',
     price: '',
